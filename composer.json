@@ -2,6 +2,7 @@
     "name": "davispeixoto/testingtool",
     "description": "Laravel 4 tests generator",
     "keywords": ["laravel", "generator", "artisan", "test"],
+    "license" : "MIT",
     "authors": [
         {
             "name": "Davis Peixoto",
