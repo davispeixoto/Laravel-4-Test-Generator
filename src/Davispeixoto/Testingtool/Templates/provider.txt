@@ -1,0 +1,8 @@
+	/**
+	 * Data provider function for {{className}}::{{methodName}}
+	 */
+	public function provider{{methodName}}()
+	{
+		return $this->dataProvider('{{csvFileName}}.csv');
+	}
+	

@@ -1,0 +1,10 @@
+	/**
+	 * Tests {{className}}::{{methodName}}
+	 *
+	 * @dataProvider provider{{methodName}}
+	 */
+	public function test{{methodName}}({{methodArgs}})
+	{
+		//@TODO implement test{{methodName}} body
+	}
+	

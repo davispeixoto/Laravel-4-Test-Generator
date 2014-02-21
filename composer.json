@@ -1,0 +1,26 @@
+{
+    "name": "davispeixoto/testingtool",
+    "description": "Laravel 4 tests generator",
+    "keywords": ["laravel", "generator", "artisan", "test"],
+    "authors": [
+        {
+            "name": "Davis Peixoto",
+            "email": "davis.peixoto@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*",
+        "illuminate/console": "4.1.*",
+        "illuminate/filesystem": "4.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/Davispeixoto/Testingtool"
+        ],
+        "psr-0": {
+            "Davispeixoto\\Testingtool\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

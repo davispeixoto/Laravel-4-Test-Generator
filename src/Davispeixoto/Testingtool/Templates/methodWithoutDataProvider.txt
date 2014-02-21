@@ -1,0 +1,8 @@
+	/**
+	 * Tests {{className}}::{{methodName}}
+	 */
+	public function test{{methodName}}()
+	{
+		//@TODO implement test{{methodName}} body
+	}
+	
