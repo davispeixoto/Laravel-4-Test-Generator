@@ -44,3 +44,8 @@ class FooTest extends TestCase {
 
 }
 ```
+
+### License
+
+This Test Generator is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
