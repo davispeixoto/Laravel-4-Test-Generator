@@ -17,7 +17,8 @@
     },
     "autoload": {
         "classmap": [
-            "src/Davispeixoto/Testingtool"
+            "src/Davispeixoto/Testingtool",
+            "tests"
         ],
         "psr-0": {
             "Davispeixoto\\Testingtool\\": "src/"
