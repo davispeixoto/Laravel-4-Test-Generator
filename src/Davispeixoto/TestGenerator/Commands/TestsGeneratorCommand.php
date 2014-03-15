@@ -1,4 +1,4 @@
-<?php namespace Davispeixoto\Testingtool\Commands;
+<?php namespace Davispeixoto\TestGenerator\Commands;
 
 use Illuminate\Filesystem\Filesystem as File;
 use Illuminate\Console\Command;
@@ -12,14 +12,14 @@ class TestsGeneratorCommand extends Command {
 	 *
 	 * @var string
 	 */
-	protected $name = 'generate:tests';
+	protected $name = 'tests:generate';
 
 	/**
 	 * The console command description.
 	 *
 	 * @var string
 	 */
-	protected $description = 'Generate a PHPUnit Test class skeleton. Enhanced stuff';
+	protected $description = 'Generate a PHPUnit/Laravel Test class skeleton.';
 	
 	/**
 	 * Execute the console command.
@@ -52,6 +52,11 @@ class TestsGeneratorCommand extends Command {
 		$str_methods_no_data_provider_placeholder = $file->get(__DIR__.'/../Templates/methodWithoutDataProvider.txt');
 		$str_providers_placeholder = $file->get(__DIR__.'/../Templates/provider.txt');
 		$savePath = $this->option('path');
+		if (!$file->exists($savePath . '/data') || !$file->isDirectory($savePath . '/data')) {
+			$file->makeDirectory($savePath . '/data' , 775);
+		} 
+		
+		
 		
 		//compose replacing placeholders with data
 		foreach ($methods as $key => $method) {
@@ -69,22 +74,22 @@ class TestsGeneratorCommand extends Command {
 						$params_array[] = '$' . $param->name;
 					}
 					
-					$csvFileName = $className . '.' . $method->name;
+					$csvFileName = $className . '.' . ucfirst($method->name);
 					$fullCsvFileName = $csvFileName . '.csv';
 					$methodArgs = join(' , ', $params_array);
 					
 					$placeholders = array('{{className}}' , '{{methodName}}' , '{{methodArgs}}');
-					$replacements = array($className , $method->name , $methodArgs);
+					$replacements = array($className , ucfirst($method->name) , $methodArgs);
 					$str_methods .= str_replace($placeholders, $replacements, $str_methods_data_provider_placeholder);
 					
 					$placeholders = array('{{className}}' , '{{methodName}}' , '{{csvFileName}}');
-					$replacements = array($className , $method->name , $csvFileName);
+					$replacements = array($className , ucfirst($method->name) , $csvFileName);
 					$str_providers .= str_replace($placeholders, $replacements, $str_providers_placeholder);
 					
-					touch($savePath . '/data/' . $fullCsvFileName);
+					$file->put($savePath . '/data/' . $fullCsvFileName, '');
 				} else {
 					$placeholders = array('{{className}}' , '{{methodName}}');
-					$replacements = array($className , $method->name);
+					$replacements = array($className , ucfirst($method->name));
 					
 					$str_methods .= str_replace($placeholders, $replacements, $str_methods_no_data_provider_placeholder);
 				}

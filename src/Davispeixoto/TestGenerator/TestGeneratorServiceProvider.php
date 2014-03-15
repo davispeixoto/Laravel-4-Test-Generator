@@ -1,9 +1,9 @@
-<?php namespace Davispeixoto\Testingtool;
+<?php namespace Davispeixoto\TestGenerator;
 
-use Davispeixoto\Testingtool\Commands;
+use Davispeixoto\TestGenerator\Commands;
 use Illuminate\Support\ServiceProvider;
 
-class TestingtoolServiceProvider extends ServiceProvider {
+class TestGeneratorServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -19,10 +19,10 @@ class TestingtoolServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['generate.tests'] = $this->app->share(function($app) {
+		$this->app['tests.generate'] = $this->app->share(function($app) {
 			return new Commands\TestsGeneratorCommand($app['files']);
 		});
 		
-		$this->commands('generate.tests');
+		$this->commands('tests.generate');
 	}
 }

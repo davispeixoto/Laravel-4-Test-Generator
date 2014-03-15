@@ -1,5 +1,5 @@
 {
-    "name": "davispeixoto/testingtool",
+    "name": "davispeixoto/laravel-test-generator",
     "description": "Laravel 4 tests generator",
     "keywords": ["laravel", "generator", "artisan", "test"],
     "license" : "MIT",
@@ -17,11 +17,11 @@
     },
     "autoload": {
         "classmap": [
-            "src/Davispeixoto/Testingtool",
+            "src/Davispeixoto/TestGenerator",
             "tests"
         ],
         "psr-0": {
-            "Davispeixoto\\Testingtool\\": "src/"
+            "Davispeixoto\\TestGenerator\\": "src/"
         }
     },
     "minimum-stability": "stable"
