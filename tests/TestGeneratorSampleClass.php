@@ -1,5 +1,5 @@
 <?php
-class TestGeneratorSampleClass
+class TestGeneratorSampleClass extends BaseClass
 {
 	const FOO = 'FOO';
 	
