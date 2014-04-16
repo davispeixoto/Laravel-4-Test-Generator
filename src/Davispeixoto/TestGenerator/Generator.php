@@ -38,7 +38,7 @@ class Generator {
 		$str_methods_no_data_provider_placeholder = $file->get(__DIR__ . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'methodWithoutDataProvider.txt');
 		$str_providers_placeholder = $file->get(__DIR__ . DIRECTORY_SEPARATOR . 'Templates' . DIRECTORY_SEPARATOR . 'provider.txt');
 		if (!$file->exists($savePath . DIRECTORY_SEPARATOR . 'data') || !$file->isDirectory($savePath . DIRECTORY_SEPARATOR . 'data')) {
-            $file->makeDirectory($savePath . DIRECTORY_SEPARATOR . 'data' , 775);
+            $file->makeDirectory($savePath . DIRECTORY_SEPARATOR . 'data' , 0775);
         }
 
 		//compose replacing placeholders with data
