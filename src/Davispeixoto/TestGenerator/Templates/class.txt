@@ -1,7 +1,6 @@
 <?php
-class {{className}}Test extends TestCase {
-	
+class {{className}}Test extends TestCase
+{
 {{methods}}
-	
 {{providers}}
 }

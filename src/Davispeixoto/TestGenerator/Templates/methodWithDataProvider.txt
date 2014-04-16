@@ -1,5 +1,5 @@
 	/**
-	 * Tests {{className}}::{{methodName}}
+	 * Tests {{className}}::{{methodNameLowerCase}}
 	 *
 	 * @dataProvider provider{{methodName}}
 	 */
@@ -7,4 +7,4 @@
 	{
 		//@TODO implement test{{methodName}} body
 	}
-	
+

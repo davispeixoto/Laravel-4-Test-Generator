@@ -6,9 +6,9 @@ class TestGeneratorSampleClassTest extends TestCase
 	 */
 	public function testNoParamsMethod()
 	{
-		//@TODO implement test{{methodName}} body
+		//@TODO implement testNoParamsMethod body
 	}
-	
+
 	/**
 	 * Tests TestGeneratorSampleClass::withParamsMethod
 	 *
@@ -16,17 +16,17 @@ class TestGeneratorSampleClassTest extends TestCase
 	 */
 	public function testWithParamsMethod($param1 , $param2)
 	{
-		//@TODO implement test{{methodName}} body
+		//@TODO implement testWithParamsMethod body
 	}
-	
+
 	/**
 	 * Tests TestGeneratorSampleClass::noParamsStaticMethod
 	 */
 	public function testNoParamsStaticMethod()
 	{
-		//@TODO implement test{{methodName}} body
+		//@TODO implement testNoParamsStaticMethod body
 	}
-	
+
 	/**
 	 * Tests TestGeneratorSampleClass::withParamsStaticMethod
 	 *
@@ -34,22 +34,25 @@ class TestGeneratorSampleClassTest extends TestCase
 	 */
 	public function testWithParamsStaticMethod($param1 , $param2)
 	{
-		//@TODO implement test{{methodName}} body
+		//@TODO implement testWithParamsStaticMethod body
 	}
-	
+
+
 	/**
 	 * Data provider function for TestGeneratorSampleClass::withParamsMethod
 	 */
 	public function providerWithParamsMethod()
 	{
-		return $this->dataProvider('TestGeneratorSampleClass.withParamsMethod.csv');
+		return $this->dataProvider('TestGeneratorSampleClass.WithParamsMethod.csv');
 	}
-	
+
 	/**
 	 * Data provider function for TestGeneratorSampleClass::withParamsStaticMethod
 	 */
 	public function providerWithParamsStaticMethod()
 	{
-		return $this->dataProvider('TestGeneratorSampleClass.withParamsStaticMethod.csv');
+		return $this->dataProvider('TestGeneratorSampleClass.WithParamsStaticMethod.csv');
 	}
+
+
 }

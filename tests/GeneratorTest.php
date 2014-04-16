@@ -4,25 +4,23 @@ use Davispeixoto\TestGenerator\Generator;
 class GeneratorTest extends PHPUnit_Framework_TestCase
 {
     protected $generator;
-    protected $output_dir;
-    protected $output_data_dir;
+    protected static $output_dir;
+    protected static $output_data_dir;
 
-    public function setUp()
+    public function __construct()
     {
-        parent::setUp();
         $this->generator = new Generator();
-        $this->output_dir = app_path() . '/tests/';
-        $this->output_data_dir = app_path() . '/tests/data/';
+        self::$output_dir = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR;
+        self::$output_data_dir = self::$output_dir . 'data'  . DIRECTORY_SEPARATOR;
     }
 
 	public function testGenerate()
 	{
-        $this->generator->generate('TestGeneratorSampleClass' , $this->output_dir);
-        $this->assertInstanceOf('Generator' , $this->generator);
-		$this->assertFileExists($this->output_dir . 'TestGeneratorSampleClassTest.php'); //Output class
-		$this->assertFileEquals(__DIR__ . '/TestGeneratorSampleClassExpectedOutput.php' , $this->output_dir . 'TestGeneratorSampleClassTest.php');
-		$this->assertFileExists($this->output_data_dir . 'TestGeneratorSampleClass.withParamsMethod.csv'); //CSV file for TestGeneratorSampleClass::withParamsStaticMethod
-		$this->assertFileExists($this->output_data_dir . 'TestGeneratorSampleClass.withParamsStaticMethod.csv'); //CSV file for TestGeneratorSampleClass::withParamsStaticMethod
+        $this->generator->generate('TestGeneratorSampleClass' , self::$output_dir);
+		$this->assertFileExists(self::$output_dir . 'TestGeneratorSampleClassTest.php'); //Output class
+		$this->assertFileEquals(__DIR__ . '/TestGeneratorSampleClassExpectedOutput.php' , self::$output_dir . 'TestGeneratorSampleClassTest.php');
+		$this->assertFileExists(self::$output_data_dir . 'TestGeneratorSampleClass.withParamsMethod.csv'); //CSV file for TestGeneratorSampleClass::withParamsStaticMethod
+		$this->assertFileExists(self::$output_data_dir . 'TestGeneratorSampleClass.withParamsStaticMethod.csv'); //CSV file for TestGeneratorSampleClass::withParamsStaticMethod
 	}
 
     /**
@@ -30,14 +28,14 @@ class GeneratorTest extends PHPUnit_Framework_TestCase
      */
     public function testException()
     {
-        $this->generator->generate('DoNotExistForTesting' , $this->output_dir);
+        $this->generator->generate('DoNotExistForTesting' , self::$output_dir);
     }
 
-	public function tearDown()
+	public static function tearDownAfterClass()
 	{
-        unlink($this->output_dir . 'TestGeneratorSampleClassTest.php');
-        unlink($this->output_data_dir . 'TestGeneratorSampleClass.withParamsMethod.csv');
-        unlink($this->output_data_dir . 'TestGeneratorSampleClass.withParamsStaticMethod.csv');
-		parent::tearDown();
+        unlink(self::$output_dir . 'TestGeneratorSampleClassTest.php');
+        unlink(self::$output_data_dir . 'TestGeneratorSampleClass.WithParamsMethod.csv');
+        unlink(self::$output_data_dir . 'TestGeneratorSampleClass.WithParamsStaticMethod.csv');
+        rmdir(self::$output_data_dir);
 	}
 }
