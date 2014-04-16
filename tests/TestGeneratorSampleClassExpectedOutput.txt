@@ -4,7 +4,7 @@ class TestGeneratorSampleClassTest extends TestCase
 	/**
 	 * Tests TestGeneratorSampleClass::noParamsMethod
 	 */
-	public function testnoParamsMethod()
+	public function testNoParamsMethod()
 	{
 		//@TODO implement test{{methodName}} body
 	}
@@ -12,9 +12,9 @@ class TestGeneratorSampleClassTest extends TestCase
 	/**
 	 * Tests TestGeneratorSampleClass::withParamsMethod
 	 *
-	 * @dataProvider providerwithParamsMethod
+	 * @dataProvider providerWithParamsMethod
 	 */
-	public function testwithParamsMethod($param1 , $param2)
+	public function testWithParamsMethod($param1 , $param2)
 	{
 		//@TODO implement test{{methodName}} body
 	}
@@ -22,7 +22,7 @@ class TestGeneratorSampleClassTest extends TestCase
 	/**
 	 * Tests TestGeneratorSampleClass::noParamsStaticMethod
 	 */
-	public function testnoParamsStaticMethod()
+	public function testNoParamsStaticMethod()
 	{
 		//@TODO implement test{{methodName}} body
 	}
@@ -30,9 +30,9 @@ class TestGeneratorSampleClassTest extends TestCase
 	/**
 	 * Tests TestGeneratorSampleClass::withParamsStaticMethod
 	 *
-	 * @dataProvider providerwithParamsStaticMethod
+	 * @dataProvider providerWithParamsStaticMethod
 	 */
-	public function testwithParamsStaticMethod($param1 , $param2)
+	public function testWithParamsStaticMethod($param1 , $param2)
 	{
 		//@TODO implement test{{methodName}} body
 	}
@@ -40,7 +40,7 @@ class TestGeneratorSampleClassTest extends TestCase
 	/**
 	 * Data provider function for TestGeneratorSampleClass::withParamsMethod
 	 */
-	public function providerwithParamsMethod()
+	public function providerWithParamsMethod()
 	{
 		return $this->dataProvider('TestGeneratorSampleClass.withParamsMethod.csv');
 	}
@@ -48,9 +48,8 @@ class TestGeneratorSampleClassTest extends TestCase
 	/**
 	 * Data provider function for TestGeneratorSampleClass::withParamsStaticMethod
 	 */
-	public function providerwithParamsStaticMethod()
+	public function providerWithParamsStaticMethod()
 	{
 		return $this->dataProvider('TestGeneratorSampleClass.withParamsStaticMethod.csv');
 	}
 }
-?>

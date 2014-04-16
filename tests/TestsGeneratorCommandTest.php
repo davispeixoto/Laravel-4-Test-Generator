@@ -1,6 +1,6 @@
 <?php
 
-class TestsGeneratorCommandTest extends TestCase
+class TestsGeneratorCommandTest extends PHPUnit
 {
 	public function testGenerateClass()
 	{
@@ -27,4 +27,3 @@ class TestsGeneratorCommandTest extends TestCase
 		unlink($output_data_dir . 'TestGeneratorSampleClass.withParamsStaticMethod.csv');
 	}
 }
-?>

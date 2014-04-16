@@ -1,5 +1,5 @@
 <?php
-class TestGeneratorSampleClass extends BaseController 
+class TestGeneratorSampleClass
 {
 	const FOO = 'FOO';
 	
@@ -71,4 +71,3 @@ class TestGeneratorSampleClass extends BaseController
 		//asd
 	}
 }
-?>
