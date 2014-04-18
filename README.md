@@ -18,9 +18,9 @@ Begin by installing this package through Composer. Edit your project's `composer
 
 	"require": {
 		"laravel/framework": "4.1.*",
-		"davispeixoto/testingtool": "dev-master"
+		"davispeixoto/testingtool": "1.0.*"
 	},
-	"minimum-stability" : "dev"
+	"minimum-stability" : "stable"
 
 Next, update Composer from the Terminal:
 
