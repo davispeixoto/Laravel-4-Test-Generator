@@ -1,6 +1,8 @@
 Laravel 4 Test Generator
 ========================
 
+[![Build Status](https://travis-ci.org/davispeixoto/Laravel-4-Test-Generator.svg?branch=master)](https://travis-ci.org/davispeixoto/Laravel-4-Test-Generator)
+
 This Laravel 4 package provides a powerful test generator to speed up your development process.
 
 It's based on the facility [PHPUnit Skeleton Generator](http://phpunit.de/manual/current/en/skeleton-generator.html) provides and [Jeffrey Way's](http://jeffrey-way.com/) [Laravel 4 generators](https://github.com/JeffreyWay/Laravel-4-Generators).

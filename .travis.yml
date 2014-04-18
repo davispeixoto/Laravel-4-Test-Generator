@@ -9,5 +9,6 @@ php:
 before_script:
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
+  - sudo find . -type d -exec chmod 777 {} +
 
 script: phpunit

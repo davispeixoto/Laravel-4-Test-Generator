@@ -44,7 +44,6 @@ class TestsGeneratorCommand extends Command {
         } catch (\Exception $e) {
             $this->error($e->getMessage());
             $this->error($e->getTraceAsString());
-            exit(1);
         }
 	}
 	
