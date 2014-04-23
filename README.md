@@ -32,20 +32,20 @@ Once this operation completes, the final step is to add the service provider. Op
 
     'Davispeixoto\Testingtool\TestingtoolServiceProvider'
 
-That's it! You're all set to go. Run the `artisan` command from the Terminal to see the new `generate:tests` commands.
+That's it! You're all set to go. Run the `artisan` command from the Terminal to see the new `tests:generate` commands.
 
     php artisan
 
 Usage
 -----
 
-Use `generate:tests` when you need to create a new PHPUnit test class.
+Use `tests:generate` when you need to create a new PHPUnit test class.
 Here's an example:
 
 ```bash
 
 php artisan controller:make UserController
-php artisan generate:tests UserController
+php artisan tests:generate UserController
 ```
 
 This will generate a resource controller and a test class `app/tests/UserControllerTest.php` as follows:
