@@ -25,6 +25,7 @@ class TestsGeneratorCommand extends Command {
 
     public function __construct()
     {
+        parent::__construct();
         $this->generator = new Generator();
     }
 	
