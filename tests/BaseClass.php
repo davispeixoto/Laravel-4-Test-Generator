@@ -1,12 +1,13 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Davis Peixoto
  * Date: 16/04/2014
  * Time: 19:48 PM
  */
-
-class BaseClass {
+class BaseClass
+{
     const BAR = 'BAR';
 
     public $bfo;
@@ -22,7 +23,7 @@ class BaseClass {
         //asd
     }
 
-    public function withParamsMethodShouldNotExist($param1 , $param2)
+    public function withParamsMethodShouldNotExist($param1, $param2)
     {
         //asd
     }
@@ -32,7 +33,7 @@ class BaseClass {
         //asd
     }
 
-    protected function withParamsProtectedMethodShouldNotExist($param1 , $param2)
+    protected function withParamsProtectedMethodShouldNotExist($param1, $param2)
     {
         //asd
     }
@@ -42,7 +43,7 @@ class BaseClass {
         //asd
     }
 
-    private function withParamsPrivateMethodShouldNotExist($param1 , $param2)
+    private function withParamsPrivateMethodShouldNotExist($param1, $param2)
     {
         //asd
     }
@@ -52,7 +53,7 @@ class BaseClass {
         //asd
     }
 
-    public static function withParamsStaticMethodShouldNotExist($param1 , $param2)
+    public static function withParamsStaticMethodShouldNotExist($param1, $param2)
     {
         //asd
     }
@@ -62,7 +63,7 @@ class BaseClass {
         //asd
     }
 
-    protected static function withParamsProtectedStaticMethodShouldNotExist($param1 , $param2)
+    protected static function withParamsProtectedStaticMethodShouldNotExist($param1, $param2)
     {
         //asd
     }
@@ -72,7 +73,7 @@ class BaseClass {
         //asd
     }
 
-    private static function withParamsPrivateStaticMethodShouldNotExist($param1 , $param2)
+    private static function withParamsPrivateStaticMethodShouldNotExist($param1, $param2)
     {
         //asd
     }

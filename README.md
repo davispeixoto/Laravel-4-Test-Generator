@@ -19,7 +19,7 @@ Installation
 Begin by installing this package through Composer. Edit your project's `composer.json` file to require `davispeixoto/testingtool`.
 
 	"require": {
-		"laravel/framework": "4.1.*",
+		"laravel/framework": "4.*",
 		"davispeixoto/testingtool": "1.0.*"
 	},
 	"minimum-stability" : "stable"
@@ -229,4 +229,4 @@ This Test Generator is open-sourced software licensed under the [MIT license](ht
 
 ### Versioning
 
-This projetct follows the [Semantic Versioning](http://semver.org/)
+This project follows the [Semantic Versioning](http://semver.org/)
