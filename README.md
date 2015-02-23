@@ -30,7 +30,7 @@ Next, update Composer from the Terminal:
 
 Once this operation completes, the final step is to add the service provider. Open `app/config/app.php`, and add a new item to the providers array.
 
-    'Davispeixoto\Testingtool\TestingtoolServiceProvider'
+    'Davispeixoto\TestGenerator\TestGeneratorServiceProvider'
 
 That's it! You're all set to go. Run the `artisan` command from the Terminal to see the new `tests:generate` commands.
 
